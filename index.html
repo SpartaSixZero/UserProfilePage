@@ -24,7 +24,7 @@
 
     <script type="text/template" id="user-profile-template">
         <div id="user-profile-card">
-            <table style="height:96px;width:728px;">
+            <table style="height:96px;width:728px">
                 <tr>
                     <td id="profile-pic-cell" class="profilePic">
                         <img src=<%= person.picLocation %>  alt="profilepic">
@@ -32,7 +32,7 @@
                     <td class="profileName" style="padding-left:10px">
                         <%= person["given-name"] %> <%= person.last %>
                     </td>
-                    <td class="profileAddress" style="padding:0 0 0 19px;">
+                    <td class="profileAddress" style="padding-right:19px;">
                         <% var address = person.address %>
                         <%= address["house-number"] %> <%= address.street %>
                         <%= address["unit-number"] %> <%= address.city %>
