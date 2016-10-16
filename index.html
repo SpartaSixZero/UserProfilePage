@@ -26,14 +26,16 @@
         <div id="user-profile-card">
             <table style="height:96px;width:728px;">
                 <tr>
-                    <td class="profilePic">
-                        image here
+                    <td id="profile-pic-cell" class="profilePic">
+                        <img src="/assets/img/male1" alt="profilepic">
                     </td>
                     <td class="profileName" style="padding-left:10px">
-                        <%= showName() %>
+                        <%= givenname %> <%= last %>
                     </td>
                     <td class="profileAddress" style="padding:0 0 0 19px;">
-                        <%= showAddress() %>
+                        <%= address["house-number"] %> <%= address.street %>
+                        <%= address["unit-number"] %> <%= address.city %>
+                        <%= address.st %> <%= address.zip %>
                     </td>
                 </tr>
             </table>
