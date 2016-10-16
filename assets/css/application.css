@@ -1,0 +1,21 @@
+.profilePic {
+    width:88px;
+    height:88px;
+    border: 4px solid;
+}
+
+.profileName {
+    font-size: 36px;
+    font: Arial;
+    font-weight: bold;
+    color: #575757;
+}
+
+.profileAddress {
+    font-size: 18px;
+    font: Arial;
+    color: #575757;
+    width: 225px;
+    vertical-align: middle;
+    text-align: center;
+}
