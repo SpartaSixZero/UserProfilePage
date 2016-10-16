@@ -12,9 +12,6 @@ ApplicationManager.module("CoolApp.UserProfile", function(UserProfile
           profilePicCell: "#profile-pic-cell"
       },
 
-      events: {
-      },
-
       onRender: function(){
           if(this.model.get("gender") === "male")
           {

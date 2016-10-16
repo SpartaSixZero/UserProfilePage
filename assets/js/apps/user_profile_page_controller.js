@@ -7,31 +7,19 @@ ApplicationManager.module("CoolApp.UserProfile", function(UserProfile
     UserProfile.Controller = {
       display: function(){
 
-          // Create model here and pass it to the ItemView
           var user_profile_model = new UserProfile.Model();
-          //user_profile_model.fetch();
 
-          var user_profile_collection = new UserProfile.Collection({
-              model: user_profile_model
-          })
-
-          user_profile_collection.fetch({
+          // Call fetch so that the model makes the data call
+          user_profile_model.fetch({
               success: function(data) {
-                    var person = data.models[0].attributes;
-                    user_profile_model.set("address", person.address);
-                    user_profile_model.set("gender", person.gender);
-                    user_profile_model.set("givenname", person["given-name"]);
-                    user_profile_model.set("last", person.last);
-                    user_profile_model.set("picLocation", person.picLocation);
+                  var user_profile_view = new UserProfile.Page({
+                      model: user_profile_model
+                  });
 
-                    var user_profile_view = new UserProfile.Page({
-                        model: user_profile_model
-                    });
-
-                    ApplicationManager.regions.main.show(user_profile_view);
+                  ApplicationManager.regions.main.show(user_profile_view);
               }
           })
       }
-    }
+  }
 
 });

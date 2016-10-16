@@ -27,12 +27,13 @@
             <table style="height:96px;width:728px;">
                 <tr>
                     <td id="profile-pic-cell" class="profilePic">
-                        <img src=<%= picLocation %>  alt="profilepic">
+                        <img src=<%= person.picLocation %>  alt="profilepic">
                     </td>
                     <td class="profileName" style="padding-left:10px">
-                        <%= givenname %> <%= last %>
+                        <%= person["given-name"] %> <%= person.last %>
                     </td>
                     <td class="profileAddress" style="padding:0 0 0 19px;">
+                        <% var address = person.address %>
                         <%= address["house-number"] %> <%= address.street %>
                         <%= address["unit-number"] %> <%= address.city %>
                         <%= address.st %> <%= address.zip %>
